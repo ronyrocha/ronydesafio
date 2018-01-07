@@ -1,0 +1,70 @@
+/* Tela de login*/
+body {
+  padding-top: 8%;
+  padding-bottom: 40px;
+  background-color: #A020F0;
+}
+
+.form-signin {
+  background: #fff;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 8px;
+  /* shadow*/
+  border: 1px solid;
+    padding: 8px;
+    box-shadow: 4px 8px #363636;
+    /* fim shadow*/
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+  text-align: center;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#cadastro{
+  position: relative;
+  left: 37%;
+  margin-top:6%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #008B00 !important;
+    border-color: #008B00 !important;
+}
+
+
+/* fim da tela de login*/
+
+
+
+/* Tela de Cadastro*/
+
+
+
+/* Fim Tela de Cadastro*/
