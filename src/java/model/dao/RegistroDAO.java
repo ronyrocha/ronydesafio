@@ -38,7 +38,7 @@ public class RegistroDAO {
     /* Inserindo dados no banco */
     public boolean inserir(Registro registro){
        
-        String sql = "INSERT INTO registro(local,login,senha) VALUES (?,?,?)";
+        String sql = "INSERT INTO registro(local,login,senha) VALUES (?,?,?) where Usuario_idUsuario=?";
         
         PreparedStatement stmt = null ;
         
@@ -47,6 +47,7 @@ public class RegistroDAO {
            stmt.setString(1, registro.getLocal());
            stmt.setString(2, registro.getLogin());
            stmt.setString(3, registro.getSenha());
+           stmt.setInt(4, registro.getUsuario_idUsuario());
            
            stmt.executeUpdate();
            return true;
@@ -68,7 +69,7 @@ public class RegistroDAO {
     /* Editar dados no banco */
     public boolean Editar(Registro registro){
        
-        String sql = "UPDATE registro SET (local,login,senha) VALUES (?,?,?)";
+        String sql = "UPDATE registro SET local=?,login=?,senha=? where idRegistro=?";
         
         PreparedStatement stmt = null ;
         
@@ -77,6 +78,7 @@ public class RegistroDAO {
            stmt.setString(1, registro.getLocal());
            stmt.setString(2, registro.getLogin());
            stmt.setString(3, registro.getSenha());
+           stmt.setInt(4, registro.getIdRegistro());
            
            stmt.executeUpdate();
            return true;

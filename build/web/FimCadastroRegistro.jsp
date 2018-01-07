@@ -1,20 +1,32 @@
+<%@page import="model.bean.Usuario"%>
+<%@page import="model.dao.UsuarioDAO"%>
 <%@page import="model.dao.RegistroDAO"%>
 <%@page import="model.bean.Registro"%>
 
 <!doctype html>
 
 <%
+       
+       
       Registro registro = new Registro();
+      RegistroDAO rd = new RegistroDAO();
        // informaçoes do formulario 
       registro.setLocal(request.getParameter("local"));
       registro.setLogin(request.getParameter("email"));
       registro.setSenha(request.getParameter("senha"));
-      
+        
+       /* UsuarioDAO dao = new UsuarioDAO();
+        Usuario usuario = new Usuario();
+        usuario = dao.checkLogin(usuario);
+        usuario.getIdUsuario();
+        int id = usuario.getIdUsuario();
+        
+        registro.setUsuario_idUsuario(id);
+      */
 
       //inserindo no banco
-      RegistroDAO dao = new RegistroDAO();
       
-      Boolean retorno = dao.inserir(registro);
+      Boolean retorno = rd.inserir(registro);
   
 %>
 

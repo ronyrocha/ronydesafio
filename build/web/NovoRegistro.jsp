@@ -49,7 +49,7 @@
     <!-- form cadastro -->
 	<div class="container-fluid">
 
-      <form  action="fimCadastroRegistro.jsp" method="post" class="form-signin" data-toggle="validator" role="form">
+      <form  action="FimCadastroRegistro.jsp" method="post" class="form-signin" data-toggle="validator" role="form">
 
            <h2 class="form-signin-heading"> <font face="Arial">Inserir novo registro</p> </font></h2>
 
@@ -60,7 +60,7 @@
            </div>
 
            <div class="form-group">
-                   <label for="inputEmail" class="control-label"> <font face="Arial">  Login: </font> </label>
+                   <label for="inputEmail" class="control-label"> <font face="Arial">  Email: </font> </label>
                       <input name="email" id="inputEmail" class="form-control" placeholder="Digite um E-mail..." type="email" data-error="Por favor, informe um e-mail válido." required> 
                          <div class="help-block with-errors"></div>
            </div> 

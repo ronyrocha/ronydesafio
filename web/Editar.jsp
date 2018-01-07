@@ -15,7 +15,8 @@
     RegistroDAO dao = new RegistroDAO();
     
     
-     registro.setIdRegistro(Integer.parseInt("id"));
+     String idd = (request.getParameter("id").trim());
+     registro.setIdRegistro(Integer.parseInt(idd));
     
      registro = dao.buscar(registro);
 
@@ -64,21 +65,23 @@
 
            <h2 class="form-signin-heading"> <font face="Arial">Editar Dados</p> </font></h2>
 
+            
+           
            <div class="form-group"> 
                   <label for="textNome" class="control-label"> <font face="Arial"> Nome: </font> </label> 
-                     <input id="textNome" class="form-control" value="<%=registro.getLocal()%> " type="text" data-error="Por favor, insira um nome." required>
+                     <input name="nome" id="textNome" class="form-control" value="<%=registro.getLocal()%> " type="text" data-error="Por favor, insira um nome." required>
                      <div class="help-block with-errors"></div>
            </div>
 
            <div class="form-group">
                    <label for="inputEmail" class="control-label"> <font face="Arial">  Login: </font> </label>
-                      <input id="inputEmail" class="form-control" value="<%= registro.getLogin() %>" type="email" data-error="Por favor, informe um e-mail válido." required> 
+                      <input name="email" id="inputEmail" class="form-control" value="<%= registro.getLogin() %>" type="email" data-error="Por favor, informe um e-mail válido." required> 
                          <div class="help-block with-errors"></div>
            </div> 
 
            <div class="form-group">
                   <label for="inputPassword" class="control-label"> <font face="Arial"> Senha: </font> </label>
-                     <input type="password" class="form-control" id="inputPassword" value="<%= registro.getSenha()%>" data-minlength="6" data-error="Mínimo de seis (6) digitos." required>
+                     <input name="senha" type="password" class="form-control" id="inputPassword" value="<%= registro.getSenha()%>" data-minlength="6" data-error="Mínimo de seis (6) digitos." required>
                      <div class="help-block with-errors"></div>
                         
            </div> 
@@ -88,7 +91,11 @@
                       <input type="password" class="form-control" id="inputConfirm" placeholder="Confirme sua Senha..." data-match="#inputPassword"
                        data-match-error="Atenção! As senhas não estão iguais." required>
                           <div class="help-block with-errors"></div>
-           </div>    
+           </div>  
+                     
+                      
+                  
+                     
 
            <div class="form-group">
              <button class="btn btn-lg btn-primary btn-block" type="submit">Enviar</button>

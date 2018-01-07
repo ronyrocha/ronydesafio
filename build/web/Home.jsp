@@ -1,9 +1,13 @@
+<%@page import="model.bean.Usuario"%>
+<%@page import="model.dao.UsuarioDAO"%>
 <%@page import="java.sql.Connection"%>
 <%@page import="java.util.List"%>
 <%@page import="model.bean.Registro"%>
 <%@page import="model.dao.RegistroDAO"%>
 <%
-   
+  
+        
+
 
     
 %>

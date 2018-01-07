@@ -25,9 +25,6 @@
          Registro registro = new Registro();
          
          String idd = (request.getParameter("id").trim());
-          
-         //int id =Integer.parseInt(request.getParameter("id"));
-         //int idd = Integer.parseInt((String)request.getParameter("id"));
          registro.setIdRegistro(Integer.parseInt(idd));
          
          //registro.setIdRegistro();
